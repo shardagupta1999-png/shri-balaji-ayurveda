@@ -10,16 +10,16 @@ export const business = {
   // Public address of the live website, used for canonical links, sitemap and social sharing.
   siteUrl: 'https://your-domain.example',
   // Phone number as it should be displayed, e.g. "+91 98765 43210"
-  phone: '',
+  phone: '9069026274',
   // WhatsApp number with country code and digits only, e.g. "919876543210"
-  whatsappNumber: '',
+  whatsappNumber: '9069026274',
   email: '',
-  address: '',
-  openingHours: '',
+  address: 'Hari Enclave, Kirari, Delhi 110086',
+  openingHours: '10am - 8pm',
   // Embed URL from Google Maps "Share > Embed a map"
   googleMapsEmbedUrl: '',
   // Link to the business on Google Maps
-  googleMapsUrl: '',
+  googleMapsUrl: 'https://maps.app.goo.gl/Qk9EVwBx9HBuZRqT8',
   // Link to the verified Google Business Profile reviews
   googleReviewsUrl: '',
   socialLinks: [

@@ -25,7 +25,7 @@ function ServiceCard({ service }: { service: Service }) {
       <div className="flex flex-1 flex-col p-7">
         {!service.availabilityConfirmed && (
           <span className="mb-4 inline-flex w-fit rounded-full bg-brand-beige px-3 py-1 text-xs font-medium text-brand-charcoal">
-            Subject to confirmation
+    
           </span>
         )}
         <h3 className="text-2xl">{service.title}</h3>

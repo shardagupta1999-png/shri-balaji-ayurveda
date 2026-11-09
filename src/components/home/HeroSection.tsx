@@ -22,7 +22,7 @@ export function HeroSection() {
         <Reveal>
           <p className="eyebrow">Ayurveda &middot; Acupressure &middot; Holistic Therapy</p>
           <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl">
-            Rediscover Wellness Through the Wisdom of Ayurveda
+            Wellness Through Ayurveda And Advance Therapy
           </h1>
           <p className="mt-6 max-w-xl text-base leading-[1.6] text-brand-charcoal/85 sm:text-lg">
             Experience a thoughtful approach to wellness with traditional healing practices, personalised care, and a

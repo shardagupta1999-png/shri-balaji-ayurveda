@@ -16,8 +16,9 @@ export const business = {
   email: 'shardagupta1999@gmail.com',
   address: 'Hari Enclave, Kirari, Delhi 110086',
   openingHours: '10am - 8pm',
-  // Embed URL from Google Maps "Share > Embed a map"
-  googleMapsEmbedUrl: 'https://maps.app.goo.gl/Qk9EVwBx9HBuZRqT8',
+  // Use Google's embed endpoint; maps.app.goo.gl share links cannot be loaded in an iframe.
+  googleMapsEmbedUrl:
+    'https://maps.google.com/maps?q=Shri%20balaji%20acupressure%20therapy%20center%2C%2028.6963409%2C%2077.0696178&z=17&output=embed',
   // Link to the business on Google Maps
   googleMapsUrl: 'https://maps.app.goo.gl/Qk9EVwBx9HBuZRqT8',
   // Link to the verified Google Business Profile reviews

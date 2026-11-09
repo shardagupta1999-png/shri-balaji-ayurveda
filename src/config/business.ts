@@ -13,11 +13,11 @@ export const business = {
   phone: '9069026274',
   // WhatsApp number with country code and digits only, e.g. "919876543210"
   whatsappNumber: '9069026274',
-  email: '',
+  email: 'shardagupta1999@gmail.com',
   address: 'Hari Enclave, Kirari, Delhi 110086',
   openingHours: '10am - 8pm',
   // Embed URL from Google Maps "Share > Embed a map"
-  googleMapsEmbedUrl: '',
+  googleMapsEmbedUrl: 'https://maps.app.goo.gl/Qk9EVwBx9HBuZRqT8',
   // Link to the business on Google Maps
   googleMapsUrl: 'https://maps.app.goo.gl/Qk9EVwBx9HBuZRqT8',
   // Link to the verified Google Business Profile reviews

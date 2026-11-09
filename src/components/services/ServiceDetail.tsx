@@ -33,7 +33,7 @@ export function ServiceDetail({ service, reverse = false }: ServiceDetailProps) 
 
         {!service.availabilityConfirmed && (
           <p className="mt-6 inline-flex rounded-full bg-brand-beige px-3 py-1 text-xs font-medium text-brand-charcoal">
-            Subject to confirmation
+          
           </p>
         )}
 

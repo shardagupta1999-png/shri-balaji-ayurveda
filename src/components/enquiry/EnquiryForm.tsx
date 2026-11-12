@@ -82,9 +82,9 @@ export function EnquiryForm({ variant, defaultService }: EnquiryFormProps) {
     event.preventDefault();
     if (isSubmitting) return;
 
-    const looksAutomated = honeypot.trim() !== '' || Date.now() - openedAt < MIN_FILL_MS;
-    if (looksAutomated) {
-      setSubmittedName(values.name.trim());
+    if (honeypot.trim() !== '') return;
+    if (Date.now() - openedAt < MIN_FILL_MS) {
+      setSubmitError('Please wait a moment before submitting.');
       return;
     }
 

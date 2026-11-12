@@ -49,7 +49,13 @@ Submitted enquiries are requests only. The site states that the centre will cont
 
 ### Supabase Configuration
 
-Set `VITE_SUPABASE_URL` to the project's HTTP or HTTPS URL (for example, `https://your-project.supabase.co`) and `VITE_SUPABASE_ANON_KEY` to its anon key. For local development, put these values in `.env.local`; configure the same variables in your hosting provider for production, then rebuild and redeploy. Do not use the service-role key in the website.
+Set `VITE_SUPABASE_URL` to the project's HTTP or HTTPS URL and `VITE_SUPABASE_ANON_KEY` to its anon/publishable key. For local development, put these values in `.env.local`. In Vercel, add both names under **Project Settings → Environment Variables** for each environment you deploy, then rebuild and redeploy.
+
+These `VITE_` variables are included in browser code, so only use the client-safe anon/publishable key. Never add a service-role/secret key to this frontend app or to any `VITE_` variable. If a server-side function is added later, keep its service-role key in a server-only environment variable and never send it to the browser.
+
+Before accepting enquiries, apply `supabase/migrations/20261109060902_create_enquiries_table.sql` to the project from **Supabase Dashboard → SQL Editor**. This creates the `public.enquiries` table and its insert-only row-level security policy. If the table already existed before that migration, also apply `supabase/migrations/20261112200000_add_enquiry_source.sql`; it adds the missing `source` field and reloads the API schema cache. A `PGRST205` error means the table is not available in the API schema cache; `PGRST204` means a submitted field is missing from that schema. Confirm migrations ran against the same project as `VITE_SUPABASE_URL`.
+
+To check the setup, restart `npm run dev`, open the site, and submit a test enquiry. A successful submission appears in the Supabase dashboard under **Table Editor → enquiries**. The app intentionally has no read access to that table, so confirm submissions in the dashboard rather than exposing a service-role key for a read test.
 
 ## SEO
 

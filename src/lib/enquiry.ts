@@ -109,6 +109,14 @@ export async function submitEnquiry(source: EnquirySource, values: EnquiryValues
   });
 
   if (error) {
+    console.error('Supabase enquiry insert failed:', { code: error.code, message: error.message });
+    if (error.code === 'PGRST205') {
+      throw new Error('The enquiry service is not set up yet. Please contact us directly.');
+    }
+    if (error.code === 'PGRST204') {
+      throw new Error('The enquiry service needs a database update. Please contact us directly.');
+    }
+
     throw new Error('We could not send your enquiry right now. Please try again or contact us directly.');
   }
 }

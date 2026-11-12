@@ -47,6 +47,10 @@ The featured review is stored in the `featuredReview` section of `src/config/bus
 
 Submitted enquiries are requests only. The site states that the centre will contact the visitor to confirm availability.
 
+### Supabase Configuration
+
+Set `VITE_SUPABASE_URL` to the project's HTTP or HTTPS URL (for example, `https://your-project.supabase.co`) and `VITE_SUPABASE_ANON_KEY` to its anon key. For local development, put these values in `.env.local`; configure the same variables in your hosting provider for production, then rebuild and redeploy. Do not use the service-role key in the website.
+
 ## SEO
 
 - Page titles, meta descriptions, Open Graph tags, and canonical links are set per page.

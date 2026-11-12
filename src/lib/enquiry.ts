@@ -94,7 +94,7 @@ export function validateEnquiry(values: EnquiryValues, source: EnquirySource): E
 
 export async function submitEnquiry(source: EnquirySource, values: EnquiryValues) {
   if (!supabase) {
-    throw new Error('Enquiry submissions are unavailable until Supabase environment variables are configured.');
+    throw new Error('Enquiry submissions are unavailable until valid VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY values are configured.');
   }
 
   const { error } = await supabase.from('enquiries').insert({
